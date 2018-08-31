@@ -10,4 +10,5 @@ public class Menu {
     public void setDishes(ArrayList<Dish> dishes) {
         this.dishes = dishes;
     }
+
 }
