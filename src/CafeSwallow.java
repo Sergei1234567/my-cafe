@@ -1,6 +1,8 @@
 public class CafeSwallow {
     public static void main(String[] args) {
         System.out.println("Menu Cafe");
+        Menu menu = new Menu();
+        System.out.println(menu.getDishes() + "");
         System.out.println("_________");
 
         Dish hotDog = new Dish("got dog", 11.1, 0.35);
@@ -16,6 +18,5 @@ public class CafeSwallow {
         Dish orangeJuice = new Dish("Orange juice", 5.6, 0.25);
         System.out.println("Dish n 3:" + "\n" + "name: " + orangeJuice.getName() + "\n" + "price: "
                 + orangeJuice.getPrice() + "\n" + "weight: " + orangeJuice.getWeight());
-        Menu menu = new Menu();
     }
 }
