@@ -1,8 +1,6 @@
 public class CafeSwallow {
     public static void main(String[] args) {
         System.out.println("Menu Cafe");
-        Menu menu = new Menu();
-        System.out.println(menu.getDishes() + "");
         System.out.println("_________");
 
         Dish hotDog = new Dish("got dog", 11.1, 0.35);
