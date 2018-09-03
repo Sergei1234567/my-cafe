@@ -1,5 +1,9 @@
 public class CafeSwallow {
     public static void main(String[] args) {
+        FreeTables tables = new FreeTables(4, 16);
+        System.out.println("Количество столиков в кафе: " + tables.getTable());
+        System.out.println("Количество мест: " + tables.getNumberOfSeats());
+        System.out.println("_____________________________");
         System.out.println("Menu Cafe");
         System.out.println("_________");
 

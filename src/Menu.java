@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class Menu {
-    private ArrayList<String> dishes = new ArrayList<>();
+    private ArrayList<Dish> dishes = new ArrayList<>();
 
-    public ArrayList<String> getDishes() {
+    public ArrayList<Dish> getDishes() {
         return dishes;
     }
 
-    public void setDishes(ArrayList<String> dishes) {
+    public void setDishes(ArrayList<Dish> dishes) {
         this.dishes = dishes;
     }
 
