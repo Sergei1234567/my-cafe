@@ -10,30 +10,6 @@ public class Dish {
         this.weight = weight;
     }
 
-    private String getName() {
-        return name;
-    }
-
-    private void setName(String name) {
-        this.name = name;
-    }
-
-    private double getPrice() {
-        return price;
-    }
-
-    private void setPrice(double price) {
-        this.price = price;
-    }
-
-    private double getWeight() {
-        return weight;
-    }
-
-    private void setWeight(double weight) {
-        this.weight = weight;
-    }
-
     @Override
     public String toString() {
         return "Dish{" +
