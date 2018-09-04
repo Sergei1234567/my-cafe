@@ -1,8 +1,10 @@
+
 public class CafeSwallow {
     public static void main(String[] args) {
+        Menu menu = new Menu();
+        menu.getDishes();
         System.out.println("Menu Cafe");
         System.out.println("_________");
-        Menu menu = new Menu();
         System.out.print(menu.getDishes());
     }
 }

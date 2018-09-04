@@ -1,7 +1,8 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Menu {
-    private ArrayList<Dish> dishes = new ArrayList<>();
+    private List<Dish> dishes = new LinkedList<>();
 
     public Menu() {
         dishes.add(new Dish("got dog", 11.1, 0.35));
@@ -9,11 +10,12 @@ public class Menu {
         dishes.add(new Dish("Orange juice", 5.6, 0.25));
     }
 
-    public ArrayList<Dish> getDishes() {
+
+    public List<Dish> getDishes() {
         return dishes;
     }
 
-    public void setDishes(ArrayList<Dish> dishes) {
+    public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
     }
 
