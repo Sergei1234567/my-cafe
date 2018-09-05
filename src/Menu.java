@@ -1,13 +1,11 @@
+import java.util.LinkedList;
 import java.util.List;
 
 public class Menu {
-    private List<Dish> dishes;
+    private List<Dish> dishes = new LinkedList<>();
+        CafeSwallow swallow = new CafeSwallow();
 
-    public List<Dish> getDishes() {
-        return dishes;
-    }
-
-    public void setDishes(List<Dish> dishes) {
-        this.dishes = dishes;
+    public void addDish(Dish dish) {
+        dishes.add(dish);
     }
 }

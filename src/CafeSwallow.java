@@ -1,18 +1,13 @@
-import java.util.LinkedList;
-import java.util.List;
 
 public class CafeSwallow {
-    public static void main(String[] args) {
-        Menu menu = new Menu();
-        List<Dish> dishes = new LinkedList<>();
+    Menu menu = new Menu();
 
-        dishes.add(new Dish("got dog", 11.1, 0.35));
-        dishes.add(new Dish("hamburger", 15.4, 0.50));
-        dishes.add(new Dish("Orange juice", 5.6, 0.25));
-        menu.setDishes(dishes);
+    public void chef() {
+        menu.addDish(new Dish("got dog", 11.1, 0.35));
+        menu.addDish(new Dish("hamburger", 15.4, 0.50));
+        menu.addDish(new Dish("Orange juice", 5.6, 0.25));
 
         System.out.println("Menu Cafe");
         System.out.println("_________");
-        System.out.print(menu.getDishes());
     }
 }
