@@ -3,9 +3,9 @@ import java.util.List;
 
 public class Menu {
     private List<Dish> dishes = new LinkedList<>();
-        CafeSwallow swallow = new CafeSwallow();
 
     public void addDish(Dish dish) {
+        System.out.println(dish);
         dishes.add(dish);
     }
 }
