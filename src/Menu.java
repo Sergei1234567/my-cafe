@@ -9,8 +9,8 @@ public class Menu {
     }
 
     public void testMenu() {
-        System.out.println("Menu Cafe");
-        System.out.println("_________");
+        System.out.println("Menu Cafe: ");
+        System.out.println("-----------");
         for (Dish dish : dishes) {
             System.out.println(dish);
         }

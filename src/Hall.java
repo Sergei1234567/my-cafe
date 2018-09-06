@@ -11,7 +11,7 @@ public class Hall {
     public void testHall() {
         System.out.println("");
         System.out.println("Сеолики в кафе: ");
-        System.out.println("_________");
+        System.out.println("----------------");
         for (OrderTable orderTab : orderTables) {
             System.out.println(orderTab);
         }
