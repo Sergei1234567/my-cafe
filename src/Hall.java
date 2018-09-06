@@ -1,0 +1,19 @@
+import java.util.LinkedList;
+import java.util.List;
+
+public class Hall {
+    private List<OrderTable> orderTables = new LinkedList<>();
+
+    public void addOrderTable(OrderTable orderTab) {
+        orderTables.add(orderTab);
+    }
+
+    public void testHall() {
+        System.out.println("");
+        System.out.println("Сеолики в кафе: ");
+        System.out.println("_________");
+        for (OrderTable orderTab : orderTables) {
+            System.out.println(orderTab);
+        }
+    }
+}
