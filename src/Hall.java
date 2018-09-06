@@ -2,6 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Hall {
+    ClientCafe clientCafe = new ClientCafe();
     private List<OrderTable> orderTables = new LinkedList<>();
 
     public void addOrderTable(OrderTable orderTab) {
@@ -15,5 +16,7 @@ public class Hall {
         for (OrderTable orderTab : orderTables) {
             System.out.println(orderTab);
         }
+    }
+    public void freeTables(){
     }
 }
