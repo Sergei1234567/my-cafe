@@ -1,6 +1,5 @@
 public class OrderTable {
     private int tables;
-    private int client;
     private int numberOfSeats;
 
     public OrderTable(int tables, int numberOfSeats) {
@@ -14,9 +13,5 @@ public class OrderTable {
                 "tables=" + tables +
                 ", numberOfSeats=" + numberOfSeats +
                 '}';
-    }
-
-    public static void main(String[] args) {
-
     }
 }
