@@ -1,7 +1,7 @@
 public class ClientCafe {
-    private int client;
+    public int client;
 
-    public ClientCafe() {
+    public ClientCafe(int client) {
         this.client = client;
     }
 

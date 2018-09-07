@@ -1,8 +1,8 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
-    private List<Dish> dishes = new LinkedList<>();
+    private List<Dish> dishes = new ArrayList<>();
 
     public void addDish(Dish dish) {
         dishes.add(dish);
