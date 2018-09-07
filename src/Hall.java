@@ -5,16 +5,18 @@ public class Hall {
 
     public Hall(int count) {
         tables = new Tables[count];
-        for (int i = 0; i < count; i++) {
-            tables[i] = new Tables();
+        for (int index = 0; index < count; index++) {
+            this.tables[index] = new Tables(index + 1);
         }
     }
 
     @Override
     public String toString() {
-        return "Hall{" +
-                "tables=" + Arrays.toString(tables) +
-                '}';
+        String result = "";
+        for(Tables table : tables){
+            result += table.toString() + "\n";
+        }
+        return result;
     }
 
     public void place(NumberOfSeats seats) {
