@@ -2,6 +2,7 @@
 public class CafeSwallow {
     private Menu menu = new Menu();
     private TesTable test = new TesTable();
+    private int client;
 
     public void initMenu() {
         menu.addDish(new Dish("got dog", 11.1, 0.35));
@@ -16,5 +17,6 @@ public class CafeSwallow {
         test.addTables(new Tables(2, 2));
         test.addTables(new Tables(3, 3));
         test.testTables();
+        }
     }
-}
+

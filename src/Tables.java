@@ -1,7 +1,7 @@
 
 public class Tables {
     private int num;
-    private int seats;
+    public int seats;
 
     public Tables(int num, int seats) {
         this.seats = seats;
