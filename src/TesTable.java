@@ -14,6 +14,5 @@ public class TesTable {
         for (Tables tables : table) {
             System.out.println(tables);
         }
-
     }
 }
