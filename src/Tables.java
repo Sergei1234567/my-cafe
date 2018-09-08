@@ -1,17 +1,18 @@
+
 public class Tables {
+    private int num;
+    private int seats;
 
-    private int number;
-
-    public Tables(int number) {
-        this.number = number;
-    }
-
-    public NumberOfSeats getFreeNumberOfSeats() {
-        return null;
+    public Tables( int num, int seats) {
+        this.seats = seats;
+        this.num = num;
     }
 
     @Override
     public String toString() {
-        return "Tables{}" + number;
+        return "Tables{" +
+                "num=" + num +
+                ", seats=" + seats +
+                '}';
     }
 }
