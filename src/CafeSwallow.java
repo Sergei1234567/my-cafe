@@ -1,11 +1,14 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class CafeSwallow {
-    private List<Table> tables = new ArrayList<>();
+    private List<Table> tables;
 
-    public void printTables() {
-        System.out.println("Menu cafe");
+    public void addTable(Table table) {
+        tables.add(table);
+    }
+
+    public void printTable() {
+        System.out.println("Tables cafe");
         System.out.println("----------\n");
         for (Table table : tables) {
             System.out.println(table);
