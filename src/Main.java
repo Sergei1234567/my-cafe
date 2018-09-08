@@ -4,7 +4,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        CafeSwallow swallow = new CafeSwallow();
+        CafeSwallow swallow = new CafeSwallow(createTables());
         swallow.printTable();
     }
 

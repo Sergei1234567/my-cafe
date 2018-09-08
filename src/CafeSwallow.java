@@ -7,13 +7,9 @@ public class CafeSwallow {
         this.tables = tables;
     }
 
-    public void addTable(Table table) {
-        tables.add(table);
-    }
-
     public void printTable() {
         System.out.println("Tables cafe");
-        System.out.println("----------\n");
+        System.out.println("-----------");
         for (Table table : tables) {
             System.out.println(table);
         }
