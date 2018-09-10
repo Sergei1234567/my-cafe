@@ -31,13 +31,13 @@ public class Main {
         int id = scan.nextInt();
         String s = scan.nextLine();
         if(id == 1 || id == 2){
-            System.out.println("The table is free of pleasant rest");
+            System.out.println("The table is free of pleasant rest\n");
         }
         if(id == 3){
-            System.out.println("sorry table is busy choose another table");
+            System.out.println("Sorry table is busy choose another table\n");
         }
-        if(id != 1 || id != 2 || id != 3){
-            System.out.println("sorry table with no number");
+        if(id != 1 && id != 2 && id != 3){
+            System.out.println("Sorry table with no number\n");
         }
         return list;
     }

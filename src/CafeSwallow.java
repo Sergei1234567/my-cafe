@@ -4,7 +4,7 @@ public class CafeSwallow {
     private List<Table> tables;
     private List list;
 
-    public CafeSwallow(List<Table> tables,List list) {
+    public CafeSwallow(List<Table> tables, List list) {
         this.tables = tables;
         this.list = list;
     }
