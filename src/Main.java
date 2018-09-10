@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        CafeSwallow swallow = new CafeSwallow(createTables());
+        CafeSwallow swallow = new CafeSwallow(createTables(),bookingATable());
         swallow.printTable();
         bookingATable();
     }
@@ -26,12 +26,12 @@ public class Main {
     }
 
     public static List<Table> bookingATable() {
-        List table = createTables();
+        List list = createTables();
         System.out.println("For what table would you sit? Enter the table number:");
         Scanner scan = new Scanner(System.in);
         int id1 = scan.nextInt();
         int id2 = scan.nextInt();
         int id3 = scan.nextInt();
-        return table;
+        return list;
     }
 }

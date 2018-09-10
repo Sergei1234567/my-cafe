@@ -2,9 +2,11 @@ import java.util.List;
 
 public class CafeSwallow {
     private List<Table> tables;
+    List list;
 
-    public CafeSwallow(List<Table> tables) {
+    public CafeSwallow(List<Table> tables,List list) {
         this.tables = tables;
+        this.list = list;
     }
 
     public void printTable() {
