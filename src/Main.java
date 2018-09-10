@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) {
         CafeSwallow swallow = new CafeSwallow(createTables(),bookingATable());
         swallow.printTable();
-        bookingATable();
     }
 
     public static void createMenu() {
