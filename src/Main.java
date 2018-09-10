@@ -28,9 +28,17 @@ public class Main {
         List list = createTables();
         System.out.println("For what table would you sit? Enter the table number:");
         Scanner scan = new Scanner(System.in);
-        int id1 = scan.nextInt();
-        int id2 = scan.nextInt();
-        int id3 = scan.nextInt();
+        int id = scan.nextInt();
+        String s = scan.nextLine();
+        if(id == 1 || id == 2){
+            System.out.println("The table is free of pleasant rest");
+        }
+        if(id == 3){
+            System.out.println("sorry table is busy choose another table");
+        }
+        if(id != 1 || id != 2 || id != 3){
+            System.out.println("sorry table with no number");
+        }
         return list;
     }
 }
