@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        CafeSwallow swallow = new CafeSwallow(createTables());
+        List tables = createTables();
+        CafeSwallow swallow = new CafeSwallow(createTables(),tables);
         swallow.printTable();
         bookingATable();
     }
@@ -39,5 +40,4 @@ public class Main {
             System.out.println("Sorry table with no number\n");
         }
     }
-
 }
