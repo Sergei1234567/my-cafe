@@ -39,4 +39,5 @@ public class Main {
             System.out.println("Sorry table with no number\n");
         }
     }
+
 }
