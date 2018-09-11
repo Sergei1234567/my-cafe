@@ -10,6 +10,10 @@ public class Table {
         this.free = free;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         String isFree = free ? "free" : "booked";

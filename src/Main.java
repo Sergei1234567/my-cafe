@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        CafeSwallow swallow = new CafeSwallow(createTables(),bookingATable());
+        CafeSwallow swallow = new CafeSwallow(createTables());
         swallow.printTable();
+        bookingATable();
     }
 
     public static void createMenu() {
@@ -24,21 +25,18 @@ public class Main {
         return tables;
     }
 
-    public static List<Table> bookingATable() {
-        List list = createTables();
+    public static void bookingATable() {
         System.out.println("For what table would you sit? Enter the table number:");
         Scanner scan = new Scanner(System.in);
         int id = scan.nextInt();
-        String s = scan.nextLine();
-        if(id == 1 || id == 2){
+        if (id == 1 || id == 2) {
             System.out.println("The table is free of pleasant rest\n");
         }
-        if(id == 3){
+        if (id == 3) {
             System.out.println("Sorry table is busy choose another table\n");
         }
-        if(id != 1 && id != 2 && id != 3){
+        if (id != 1 && id != 2 && id != 3) {
             System.out.println("Sorry table with no number\n");
         }
-        return list;
     }
 }
