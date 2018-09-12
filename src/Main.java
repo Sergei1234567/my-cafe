@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        List tables = createTables();
+        List<Table> tables = createTables();
         CafeSwallow swallow = new CafeSwallow(tables);
         swallow.printTable();
-        bookingATable();
+        bookTable();
     }
 
     public static void createMenu() {
@@ -26,15 +26,16 @@ public class Main {
         return tables;
     }
 
-    public static void bookingATable() {
+    public static void bookTable() {
         System.out.println("For what table would you sit? Enter the table number:");
         Scanner scan = new Scanner(System.in);
         int id = scan.nextInt();
         if (id == 1 || id == 2) {
-            System.out.println("The table is free of pleasant rest\n");
+            System.out.println(createTables().get(0) + "\n" + createTables().get(1) + ":\n" +
+                    "The table is free of pleasant rest\n");
         }
         if (id == 3) {
-            System.out.println("Sorry table is busy choose another table\n");
+            System.out.println(createTables().get(2) + ":\n" + "Sorry table is busy choose another table\n");
         }
         if (id != 1 && id != 2 && id != 3) {
             System.out.println("Sorry table with no number\n");
