@@ -36,7 +36,7 @@ public class Main {
                 table.isFree();
                 System.out.println(table + "The table is free of pleasant rest\n");
             }else {
-                return;
+//                do nothing
             }
         }
     }
