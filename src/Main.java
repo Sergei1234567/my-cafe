@@ -33,13 +33,20 @@ public class Main {
         int id = scan.nextInt();
         for (Table table : tables) {
             if (id == table.getId()) {
-                System.out.println(table);
-            } else {
-                //do nothing
+                if (table.isFree() == true) {
+                    System.out.println(table + "\n" + "The table is free of pleasant rest");
+                }
+                if (table.isFree() == false) {
+                    System.out.println(table + "\n" + "Sorry table is busy choose another table");
+                }
+                if (id != table.getId()) {
+                    System.out.println(table + "\n" + "Sorry table with no number");
+                }
             }
         }
     }
 }
+
 
 
 
