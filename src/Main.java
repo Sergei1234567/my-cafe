@@ -27,16 +27,15 @@ public class Main {
     }
 
     public static void bookTable() {
-        List<Table> tables = new ArrayList<>();
+        List<Table> tables = new ArrayList<>(createTables());
         System.out.println("For what table would you sit? Enter the table number:");
         Scanner scan = new Scanner(System.in);
         int id = scan.nextInt();
         for (Table table : tables) {
             if (id == table.getId()) {
-                table.isFree();
-                System.out.println(table + "The table is free of pleasant rest\n");
-            }else {
-//                do nothing
+                System.out.println(table);
+            } else {
+                //do nothing
             }
         }
     }
