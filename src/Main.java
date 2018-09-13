@@ -33,10 +33,14 @@ public class Main {
         int id = scan.nextInt();
         for (Table table : tables) {
             if (id == table.getId()) {
+                table.isFree();
                 System.out.println(table + "The table is free of pleasant rest\n");
+            }else {
+                return;
             }
         }
     }
 }
+
 
 
