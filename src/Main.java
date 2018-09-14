@@ -28,7 +28,7 @@ public class Main {
 
     public static void bookTable() {
         List<Table> tables = new ArrayList<>(createTables());
-        System.out.println("For what table would you sit? Enter the table number:");
+        System.out.println("\nFor what table would you sit? Enter the table number:\n"+"----");
         Scanner scan = new Scanner(System.in);
         int id = scan.nextInt();
         for (Table table : tables) {
@@ -39,9 +39,8 @@ public class Main {
                 if (table.isFree() == false) {
                     System.out.println(table + "\n" + "Sorry table is busy choose another table");
                 }
-                if (id != table.getId()) {
-                    System.out.println(table + "\n" + "Sorry table with no number");
-                }
+            } else {
+                System.out.println("Sorry table with no number");
             }
         }
     }
