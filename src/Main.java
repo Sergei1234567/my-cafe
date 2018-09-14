@@ -28,23 +28,25 @@ public class Main {
 
     public static void bookTable() {
         List<Table> tables = new ArrayList<>(createTables());
-        System.out.println("\nFor what table would you sit? Enter the table number:\n"+"----");
+        System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
         Scanner scan = new Scanner(System.in);
         int id = scan.nextInt();
         for (Table table : tables) {
-            if (id == table.getId()) {
-                if (table.isFree() == true) {
-                    System.out.println(table + "\n" + "The table is free of pleasant rest");
-                }
-                if (table.isFree() == false) {
-                    System.out.println(table + "\n" + "Sorry table is busy choose another table");
-                }
-            } else {
+            if (id == table.getId() && table.isFree() == true) {
+                System.out.println(table + "\n" + "----------------------------" + "\n" +
+                        "The table is free of pleasant rest");
+            }
+            if (id == table.getId() && table.isFree() == false) {
+                System.out.println(table + "\n" + "----------------------------------------" + "\n" +
+                        "Sorry table is busy choose another table:");
+            }
+            if (id != table.getId()) {
                 System.out.println("Sorry table with no number");
             }
         }
     }
 }
+
 
 
 
