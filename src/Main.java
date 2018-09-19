@@ -1,4 +1,3 @@
-import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -31,20 +30,31 @@ public class Main {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
         Scanner scan = new Scanner(System.in);
         int id = scan.nextInt();
-        for (Table table : tables) {
-            if (id == table.getId()) {
-                if (table.isFree()) {
-                    System.out.println(table + "\n" + "----------------------------" + "\n" +
-                            "The table is free of pleasant rest");
-                } else {
-                    System.out.println(table + "\n" + "----------------------------------------" + "\n" +
-                            "Sorry table is busy choose another table:");
-                }
+        Table table = findTableById(tables, id);
+        if (table == null) {
+            System.out.println("There is no stenotic with such a number. Please enter another number");
+        }
+        if (table != null) {
+            if (table.isFree()) {
+                table.setFree(false);
+                System.out.println(table + "\n" + "----------------------------" + "\n" +
+                        "The table is free of pleasant rest");
+            } else {
+                System.out.println(table + "\n" + "----------------------------------------" + "\n" +
+                        "Sorry table is busy choose another table:");
             }
         }
     }
-}
 
+    public static Table findTableById(List<Table> tables, int number) {
+        for (Table table : tables) {
+            if (number == table.getId()) {
+                return table;
+            }
+        }
+        return null;
+    }
+}
 
 
 

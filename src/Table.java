@@ -4,7 +4,6 @@ public class Table {
     private int seatsCount;
     private boolean free;
 
-
     public Table(int id, int seatsCount, boolean free) {
         this.id = id;
         this.seatsCount = seatsCount;
@@ -13,6 +12,10 @@ public class Table {
 
     public boolean isFree() {
         return free;
+    }
+
+    public void setFree(boolean free) {
+        this.free = free;
     }
 
     public int getId() {
