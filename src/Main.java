@@ -27,7 +27,11 @@ public class Main {
     }
 
     public static void bookTable(List<Table> tables) {
-        Table table = findTableById(tables, tableReservation());
+        Table table = findTableById(tables, getUserNumber());
+        while (table == null) {
+            System.out.println("There is no stenotic with such a number. Please enter another number");
+            table = findTableById(tables, getUserNumber());
+        }
         if (table != null) {
             if (table.isFree()) {
                 table.setFree(false);
@@ -37,8 +41,6 @@ public class Main {
                 System.out.println(table + "\n" + "----------------------------------------" + "\n" +
                         "Sorry table is busy choose another table:");
             }
-        } else {
-            System.out.println("There is no stenotic with such a number. Please enter another number");
         }
     }
 
@@ -51,11 +53,10 @@ public class Main {
         return null;
     }
 
-    public static int tableReservation() {
+    public static int getUserNumber() {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
         Scanner scan = new Scanner(System.in);
-        int id = scan.nextInt();
-        return id;
+        return scan.nextInt();
     }
 }
 
