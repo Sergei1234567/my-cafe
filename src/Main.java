@@ -6,16 +6,19 @@ public class Main {
 
     public static void main(String[] args) {
         List<Table> tables = createTables();
-        CafeSwallow swallow = new CafeSwallow(tables);
+        List<Menu> menuList = createMenu();
+        CafeSwallow swallow = new CafeSwallow(tables, menuList);
         swallow.printTable();
+        swallow.testMenu();
         bookTable(tables);
     }
 
-    public static void createMenu() {
-        Menu menu = new Menu();
-        menu.addDish(new Dish("got dog", 11.1, 0.35));
-        menu.addDish(new Dish("hamburger", 15.4, 0.50));
-        menu.addDish(new Dish("Orange juice", 5.6, 0.25));
+    public static List<Menu> createMenu() {
+        List<Menu> menuList = new ArrayList<>();
+        menuList.add(new Menu("got dog", 11.1, 0.35));
+        menuList.add(new Menu("hamburger", 15.4, 0.50));
+        menuList.add(new Menu("Orange juice", 5.6, 0.25));
+        return menuList;
     }
 
     public static List<Table> createTables() {

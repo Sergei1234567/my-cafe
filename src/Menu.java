@@ -1,18 +1,17 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Menu {
-    private List<Dish> dishes = new ArrayList<>();
+    private String name;
+    private double price;
+    private double weight;
 
-    public void addDish(Dish dish) {
-        dishes.add(dish);
+    public Menu(String name, double price, double weight) {
+        this.name = name;
+        this.price = price;
+        this.weight = weight;
     }
 
-    public void testMenu() {
-        System.out.println("Menu Cafe: ");
-        System.out.println("-----------");
-        for (Dish dish : dishes) {
-            System.out.println(dish);
-        }
+    @Override
+    public String toString() {
+        return "Menu " + "\n" + "Name: " + name + "\n" + "Price: " + price + "\n" + "weight: " + weight;
     }
 }
