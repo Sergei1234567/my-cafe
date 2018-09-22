@@ -9,6 +9,7 @@ public class Main {
         List<Menu> menuList = createMenu();
         CafeSwallow swallow = new CafeSwallow(tables, menuList);
         swallow.printTable();
+        System.out.println();
         swallow.testMenu();
         bookTable(tables, menuList);
     }
