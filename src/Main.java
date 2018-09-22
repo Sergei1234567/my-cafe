@@ -10,7 +10,7 @@ public class Main {
         CafeSwallow swallow = new CafeSwallow(tables, menuList);
         swallow.printTable();
         swallow.testMenu();
-        bookTable(tables);
+        bookTable(tables, menuList);
     }
 
     public static List<Menu> createMenu() {
@@ -29,7 +29,7 @@ public class Main {
         return tables;
     }
 
-    public static void bookTable(List<Table> tables) {
+    public static void bookTable(List<Table> tables, List<Menu> menuList) {
         Table table = findTableById(tables, getUserNumber());
         while (table == null) {
             System.out.println("There is no stenotic with such a number. Please enter another number");
@@ -38,8 +38,8 @@ public class Main {
         if (table != null) {
             if (table.isFree()) {
                 table.setFree(false);
-                System.out.println(table + "\n" + "----------------------------" + "\n" +
-                        "The table is free of pleasant rest");
+                System.out.println(table + "\n" + "----------------------------------" + "\n" +
+                        "The table is free of pleasant rest" + "\n" + "----------" + "\n" + menuList);
             } else {
                 System.out.println(table + "\n" + "----------------------------------------" + "\n" +
                         "Sorry table is busy choose another table:");

@@ -12,6 +12,7 @@ public class Menu {
 
     @Override
     public String toString() {
-        return "Menu " + "\n" + "Name: " + name + "\n" + "Price: " + price + "\n" + "weight: " + weight;
+        return "Menu " + "\n" + "-----" + "\n" + "Name: " + name + "\n" + "Price: " + price + "\n" + "weight: "
+                + weight;
     }
 }
