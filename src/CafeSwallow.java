@@ -17,7 +17,7 @@ public class CafeSwallow {
         }
     }
 
-    public void testMenu() {
+    public void printMenu() {
         System.out.println("Menu Cafe: ");
         System.out.println("-----------");
         for (Menu menu : menuList) {
