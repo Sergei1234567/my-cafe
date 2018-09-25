@@ -35,13 +35,13 @@ public class Main {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
         Table table = findTableById(tables, getUserChoice());
         while (table == null) {
-            System.out.println("There is no table with such a number. Please enter another number");
+            System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
             table = findTableById(tables, getUserChoice());
         }
 
         while (!table.isFree()) {
             System.out.println(table + "\n" + "----------------------------------------" + "\n" +
-                    "Sorry table is busy choose another table:");
+                    "Sorry table is busy choose another table:" + "\n" + "---");
             table = findTableById(tables, getUserChoice());
         }
 
