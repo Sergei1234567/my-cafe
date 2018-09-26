@@ -51,6 +51,7 @@ public class Main {
     }
 
     public static Table findTableById(List<Table> tables, int number) {
+        tables.contains(number);
         for (Table table : tables) {
             if (number == table.getId()) {
                 return table;
