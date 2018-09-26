@@ -2,11 +2,11 @@ import java.util.List;
 
 public class CafeSwallow {
     private List<Table> tables;
-    private List<Menu> menuList;
+    private List<Menu> menu;
 
-    public CafeSwallow(List<Table> tables, List<Menu> menuList) {
+    public CafeSwallow(List<Table> tables, List<Menu> menu) {
         this.tables = tables;
-        this.menuList = menuList;
+        this.menu = menu;
     }
 
     public void printTable() {
@@ -20,7 +20,7 @@ public class CafeSwallow {
     public void printMenu() {
         System.out.println("Menu Cafe: ");
         System.out.println("-----------");
-        for (Menu menu : menuList) {
+        for (Menu menu : menu) {
             System.out.println(menu);
         }
     }

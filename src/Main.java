@@ -6,20 +6,20 @@ public class Main {
 
     public static void main(String[] args) {
         List<Table> tables = createTables();
-        List<Menu> menuList = createMenu();
-        CafeSwallow swallow = new CafeSwallow(tables, menuList);
+        List<Menu> menu = createMenu();
+        CafeSwallow swallow = new CafeSwallow(tables, menu);
         swallow.printTable();
         System.out.println();
         swallow.printMenu();
-        bookTable(tables, menuList);
+        bookTable(tables, menu);
     }
 
     public static List<Menu> createMenu() {
-        List<Menu> menuList = new ArrayList<>();
-        menuList.add(new Menu("got dog", 11.1, 0.35));
-        menuList.add(new Menu("hamburger", 15.4, 0.50));
-        menuList.add(new Menu("Orange juice", 5.6, 0.25));
-        return menuList;
+        List<Menu> menu = new ArrayList<>();
+        menu.add(new Menu("got dog", 11.1, 0.35));
+        menu.add(new Menu("hamburger", 15.4, 0.50));
+        menu.add(new Menu("Orange juice", 5.6, 0.25));
+        return menu;
     }
 
     public static List<Table> createTables() {
@@ -31,7 +31,7 @@ public class Main {
         return tables;
     }
 
-    public static void bookTable(List<Table> tables, List<Menu> menuList) {
+    public static void bookTable(List<Table> tables, List<Menu> menu) {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
         Table table = findTableById(tables, getUserChoice());
         while (table == null) {
@@ -47,7 +47,7 @@ public class Main {
 
         table.setFree(false);
         System.out.println(table + "\n" + "----------------------------------" + "\n" +
-                "The table is free of pleasant rest" + "\n" + "----------" + "\n" + menuList);
+                "The table is free of pleasant rest" + "\n" + "----------" + "\n" + menu);
     }
 
     public static Table findTableById(List<Table> tables, int number) {
@@ -61,7 +61,8 @@ public class Main {
 
     public static int getUserChoice() {
         Scanner scan = new Scanner(System.in);
-        return scan.nextInt();
+        String s = scan.nextLine();
+        return Integer.parseInt(s);
     }
 }
 
