@@ -10,6 +10,7 @@ public class Table {
         this.free = free;
     }
 
+
     public boolean isFree() {
         return free;
     }

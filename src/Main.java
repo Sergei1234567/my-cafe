@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
 
@@ -11,7 +10,7 @@ public class Main {
         swallow.printTable();
         System.out.println();
         swallow.printMenu();
-        bookTable(tables, menu);
+        swallow.bookTable(tables, menu);
     }
 
     public static List<Menu> createMenu() {
@@ -30,42 +29,8 @@ public class Main {
         tables.add(new Table(4, 4, true));
         return tables;
     }
-
-    public static void bookTable(List<Table> tables, List<Menu> menu) {
-        System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
-        Table table = findTableById(tables, getUserChoice());
-        while (table == null) {
-            System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
-            table = findTableById(tables, getUserChoice());
-        }
-
-        while (!table.isFree()) {
-            System.out.println(table + "\n" + "----------------------------------------" + "\n" +
-                    "Sorry table is busy choose another table:" + "\n" + "---");
-            table = findTableById(tables, getUserChoice());
-        }
-
-        table.setFree(false);
-        System.out.println(table + "\n" + "----------------------------------" + "\n" +
-                "The table is free of pleasant rest" + "\n" + "----------" + "\n" + menu);
-    }
-
-    public static Table findTableById(List<Table> tables, int number) {
-        tables.contains(number);
-        for (Table table : tables) {
-            if (number == table.getId()) {
-                return table;
-            }
-        }
-        return null;
-    }
-
-    public static int getUserChoice() {
-        Scanner scan = new Scanner(System.in);
-        String s = scan.nextLine();
-        return Integer.parseInt(s);
-    }
 }
+
 
 
 
