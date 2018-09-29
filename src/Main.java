@@ -2,13 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-
     public static void main(String[] args) {
         List<Table> tables = createTables();
         List<Menu> menu = createMenu();
         CafeSwallow swallow = new CafeSwallow(tables, menu);
         swallow.printTable();
-        System.out.println();
         swallow.printMenu();
         swallow.bookTable(tables, menu);
     }

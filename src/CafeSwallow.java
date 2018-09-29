@@ -19,12 +19,13 @@ public class CafeSwallow {
     }
 
     public void printMenu() {
-        System.out.println("Menu Cafe: ");
+        System.out.println("\n" + "Menu Cafe:");
         System.out.println("-----------");
         for (Menu menu : menu) {
             System.out.println(menu);
         }
     }
+
     public void bookTable(List<Table> tables, List<Menu> menu) {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
         Table table = findTableById(tables, getUserChoice());
