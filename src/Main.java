@@ -4,7 +4,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Table> tables = createTables();
-        List<Muniltem> menu = createMenu();
+        List<MenuItem> menu = createMenu();
         Tables tables1 = new Tables(tables);
         tables1.printTable();
         Menu menu1 = new Menu(menu);
@@ -13,11 +13,11 @@ public class Main {
         swallow.bookTable(tables, menu);
     }
 
-    public static List<Muniltem> createMenu() {
-        List<Muniltem> menu = new ArrayList<>();
-        menu.add(new Muniltem("got dog", 11.1, 0.35));
-        menu.add(new Muniltem("hamburger", 15.4, 0.50));
-        menu.add(new Muniltem("Orange juice", 5.6, 0.25));
+    public static List<MenuItem> createMenu() {
+        List<MenuItem> menu = new ArrayList<>();
+        menu.add(new MenuItem("got dog", 11.1, 0.35));
+        menu.add(new MenuItem("hamburger", 15.4, 0.50));
+        menu.add(new MenuItem("Orange juice", 5.6, 0.25));
         return menu;
     }
 

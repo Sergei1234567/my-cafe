@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class CafeSwallow {
 
-    public void bookTable(List<Table> tables, List<Muniltem> menu) {
+    public void bookTable(List<Table> tables, List<MenuItem> menu) {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
         Table table = findTableById(tables, getUserChoice());
 

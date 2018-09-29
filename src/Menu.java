@@ -1,16 +1,16 @@
 import java.util.List;
 
 public class Menu {
-    private List<Muniltem> menu;
+    private List<MenuItem> menu;
 
-    public Menu(List<Muniltem> menu) {
+    public Menu(List<MenuItem> menu) {
         this.menu = menu;
     }
 
     public void printMenu() {
         System.out.println("\n" + "Menu Cafe:");
         System.out.println("-----------");
-        for (Muniltem menu : menu) {
+        for (MenuItem menu : menu) {
             System.out.println(menu);
         }
     }

@@ -1,9 +1,9 @@
-public class Muniltem {
+public class MenuItem {
     private String name;
     private double price;
     private double weight;
 
-    public Muniltem(String name, double price, double weight) {
+    public MenuItem(String name, double price, double weight) {
         this.name = name;
         this.price = price;
         this.weight = weight;
