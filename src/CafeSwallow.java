@@ -1,21 +1,26 @@
 import java.util.List;
 
 public class CafeSwallow {
-    List<Table> tables;
-    List<MenuItem> menu;
+
+    Tables tables;
+    Menu menu;
 
     public CafeSwallow(List<Table> tables, List<MenuItem> menu) {
-        this.tables = tables;
-        this.menu = menu;
+        this.tables = new Tables(tables);
+        this.menu = new Menu(menu);
     }
 
-    public void tablesEndMenu() {
-        Tables tables1 = new Tables(tables);
-        Menu menu1 = new Menu(menu);
-        tables1.printTable();
-        menu1.printMenu();
-        tables1.bookTable();
-        menu1.printMenu();
+    public void printTable(){
+        tables.printTable();
+    }
+
+    public void printMenu(){
+        menu.printMenu();
+    }
+
+    public Table bookTable(){
+        Table table = tables.bookTable();
+        return table;
     }
 }
 

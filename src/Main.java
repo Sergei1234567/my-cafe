@@ -6,7 +6,10 @@ public class Main {
         List<Table> tables = createTables();
         List<MenuItem> menu = createMenu();
         CafeSwallow swallow = new CafeSwallow(tables, menu);
-        swallow.tablesEndMenu();
+        swallow.printTable();
+        swallow.printMenu();
+        swallow.bookTable();
+        swallow.printMenu();
     }
 
     private static List<MenuItem> createMenu() {
