@@ -3,29 +3,32 @@ import java.util.Scanner;
 
 public class Tables {
     private List<Table> tables;
+
     public Tables(List<Table> tables) {
         this.tables = tables;
     }
 
-
-    public int bookTable(int tableid) {
-       Table table = findTableById(tables, getUserChoice());
+    public Table bookTable() {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
+        Table table = findTableById(tables, getUserChoice());
         while (table == null) {
             System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
+            table = findTableById(tables, getUserChoice());
         }
         while (!table.isFree()) {
-            System.out.println(tableid + "\n" + "----------------------------------------" + "\n" +
+            System.out.println(table + "\n" + "----------------------------------------" + "\n" +
                     "Sorry table is busy choose another table:" + "\n" + "---");
+            table = findTableById(tables, getUserChoice());
             while (table == null) {
                 System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
+                table = findTableById(tables, getUserChoice());
             }
         }
 
         table.setFree(false);
-        System.out.println(tableid + "\n" + "----------------------------------" + "\n" +
-                "The table is free of pleasant rest" + "\n" + "----------" + "\n");
-        return tableid;
+        System.out.println(table + "\n" + "----------------------------------" + "\n" +
+                "The table is free of pleasant rest" + "\n" + "----------");
+        return table;
     }
 
     public void printTable() {

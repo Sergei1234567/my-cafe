@@ -5,11 +5,8 @@ public class Main {
     public static void main(String[] args) {
         List<Table> tables = createTables();
         List<MenuItem> menu = createMenu();
-        Tables tables1 = new Tables(tables);
-        tables1.printTable();
-        tables1.bookTable()
-        Menu menu1 = new Menu(menu);
-        menu1.printMenu();
+        CafeSwallow swallow = new CafeSwallow(tables, menu);
+        swallow.TableEndMenu();
     }
 
     private static List<MenuItem> createMenu() {

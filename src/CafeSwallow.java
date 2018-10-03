@@ -1,39 +1,21 @@
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class CafeSwallow {
+    List<Table> tables;
+    List<MenuItem> menu;
 
-//    public void bookTable() {
-//        System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
-//        while (table == null) {
-//            System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
-//        }
-//        while (!table.isFree()) {
-//            System.out.println(table + "\n" + "----------------------------------------" + "\n" +
-//                    "Sorry table is busy choose another table:" + "\n" + "---");
-//            while (table == null) {
-//                System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
-//            }
-//        }
-//
-//        table.setFree(false);
-//        System.out.println(table + "\n" + "----------------------------------" + "\n" +
-//                "The table is free of pleasant rest" + "\n" + "----------" + "\n" + menu);
-//    }
+    public CafeSwallow(List<Table> tables, List<MenuItem> menu) {
+        this.tables = tables;
+        this.menu = menu;
+    }
 
-//    private Table findTableById(List<Table> tables, int number) {
-//        for (Table table : tables) {
-//            if (number == table.getId()) {
-//                return table;
-//            }
-//        }
-//        return null;
-//    }
-
-//    private int getUserChoice() {
-//        Scanner scan = new Scanner(System.in);
-//        return scan.nextInt();
-//    }
+    public void TableEndMenu() {
+        Tables tables1 = new Tables(tables);
+        Menu menu1 = new Menu(menu);
+        tables1.printTable();
+        menu1.printMenu();
+        tables1.bookTable();
+        menu1.printMenu();
+    }
 }
 
