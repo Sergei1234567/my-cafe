@@ -9,7 +9,7 @@ public class CafeSwallow {
         this.menu = menu;
     }
 
-    public void TableEndMenu() {
+    public void tablesEndMenu() {
         Tables tables1 = new Tables(tables);
         Menu menu1 = new Menu(menu);
         tables1.printTable();

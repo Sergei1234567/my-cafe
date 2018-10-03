@@ -6,7 +6,7 @@ public class Main {
         List<Table> tables = createTables();
         List<MenuItem> menu = createMenu();
         CafeSwallow swallow = new CafeSwallow(tables, menu);
-        swallow.TableEndMenu();
+        swallow.tablesEndMenu();
     }
 
     private static List<MenuItem> createMenu() {
