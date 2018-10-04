@@ -10,15 +10,15 @@ public class CafeSwallow {
         this.menu = new Menu(menu);
     }
 
-    public void printTable(){
+    public void printTable() {
         tables.printTable();
     }
 
-    public void printMenu(){
+    public void printMenu() {
         menu.printMenu();
     }
 
-    public Table bookTable(){
+    public Table bookTable() {
         Table table = tables.bookTable();
         return table;
     }

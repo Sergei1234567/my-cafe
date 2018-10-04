@@ -10,18 +10,18 @@ public class Tables {
 
     public Table bookTable() {
         System.out.println("\nFor what table would you sit? Enter the table number:\n" + "----");
-        Table table = findTableById(tables, getUserChoice());
+        Table table = findTableById(getUserChoice());
         while (table == null) {
             System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
-            table = findTableById(tables, getUserChoice());
+            table = findTableById(getUserChoice());
         }
         while (!table.isFree()) {
             System.out.println(table + "\n" + "----------------------------------------" + "\n" +
                     "Sorry table is busy choose another table:" + "\n" + "---");
-            table = findTableById(tables, getUserChoice());
+            table = findTableById(getUserChoice());
             while (table == null) {
                 System.out.println("There is no table with such a number. Please enter another number" + "\n" + "---");
-                table = findTableById(tables, getUserChoice());
+                table = findTableById(getUserChoice());
             }
         }
 
@@ -40,7 +40,7 @@ public class Tables {
     }
 
 
-    public Table findTableById(List<Table> tables, int number) {
+    public Table findTableById(int number) {
         for (Table table : tables) {
             if (number == table.getId()) {
                 return table;
