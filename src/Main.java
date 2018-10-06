@@ -7,16 +7,16 @@ public class Main {
         List<MenuItem> menu = createMenu();
         CafeSwallow swallow = new CafeSwallow(tables, menu);
         swallow.printTable();
-        swallow.printMenu();
         swallow.bookTable();
         swallow.printMenu();
+        swallow.selectionOfDishes();
     }
 
     private static List<MenuItem> createMenu() {
         List<MenuItem> menu = new ArrayList<>();
-        menu.add(new MenuItem("got dog", 11.1, 0.35));
-        menu.add(new MenuItem("hamburger", 15.4, 0.50));
-        menu.add(new MenuItem("Orange juice", 5.6, 0.25));
+        menu.add(new MenuItem(1,"got dog", 11.1, 0.35));
+        menu.add(new MenuItem(2,"hamburger", 15.4, 0.50));
+        menu.add(new MenuItem(3,"Orange juice", 5.6, 0.25));
         return menu;
     }
 

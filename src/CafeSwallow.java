@@ -22,5 +22,9 @@ public class CafeSwallow {
         Table table = tables.bookTable();
         return table;
     }
+    public MenuItem selectionOfDishes(){
+        MenuItem menus = menu.selectionOfDishes();
+        return menus;
+    }
 }
 
